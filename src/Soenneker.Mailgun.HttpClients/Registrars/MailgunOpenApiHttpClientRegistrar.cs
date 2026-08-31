@@ -6,7 +6,7 @@ using Soenneker.Utils.HttpClientCache.Registrar;
 namespace Soenneker.Mailgun.HttpClients.Registrars;
 
 /// <summary>
-/// Registers the OpenAPI HttpClient wrapper for dependency injection.
+/// Registers the cached Mailgun HTTP client provider.
 /// </summary>
 public static class MailgunOpenApiHttpClientRegistrar
 {
