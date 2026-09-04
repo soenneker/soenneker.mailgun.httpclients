@@ -12,6 +12,7 @@ using Soenneker.Utils.HttpClientCache.Abstract;
 
 namespace Soenneker.Mailgun.HttpClients;
 
+/// <inheritdoc cref="IMailgunOpenApiHttpClient" />
 public sealed class MailgunOpenApiHttpClient : IMailgunOpenApiHttpClient
 {
     private readonly IHttpClientCache _httpClientCache;
