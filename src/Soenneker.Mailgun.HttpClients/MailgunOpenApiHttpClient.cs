@@ -31,7 +31,7 @@ public sealed class MailgunOpenApiHttpClient : IMailgunOpenApiHttpClient
     {
         return _httpClientCache.Get(_clientId, (config: _config, baseUrl: _config["Mailgun:ClientBaseUrl"] ?? _prodBaseUrl), static state =>
         {
-            var apiKey = state.config.GetValueStrict<string>("Mailgun:ApiKey");
+            var apiKey = state.config.GetStringStrict("Mailgun:ApiKey");
             string authHeaderName = state.config["Mailgun:AuthHeaderName"] ?? "Authorization";
             string? authHeaderValueTemplate = state.config["Mailgun:AuthHeaderValueTemplate"];
             string authHeaderValue = authHeaderValueTemplate is null
